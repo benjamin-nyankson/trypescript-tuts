@@ -5,21 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
 
-    <div style="width:400px; margin: 200px auto;">
-        <input placeholder="a" type="text" id="a"
-            style='text-align: center; width: 50px; height: 50px; font-size: 20px; border-radius: 5px;' />
-        <input placeholder="b"
-            style='text-align: center; width: 50px; height: 50px; font-size: 20px; border-radius: 5px;' />
-        <input placeholder="c"
-            style='text-align: center; width: 50px; height: 50px; font-size: 20px; border-radius: 5px;' />
+
+    <div
+        style="width:400px; margin: 200px auto; border: 5px solid rgb(204, 4, 137); display:flex; flex-direction: column; justify-content: center; align-items: center;border-radius: 10px; ">
+        <h3 style="color: rgb(204, 4, 137);">Quadratic Calculator</h3>
+        <h5 style="color: rgb(204, 4, 137);">ax<sup>2</sup>+bx=0</h5>
+        <div>
+            <input placeholder="a" type="number" id="a" maxlength=""
+                style='text-align: center; width: 50px; height: 50px; font-size: 20px; border-radius: 5px; border:2px solid  rgb(204, 4, 137); color: rgb(204, 4, 137); font-weight: bolder;' />
+            <input placeholder="b" type="number" id="b"
+                style='text-align: center; width: 50px; height: 50px; font-size: 20px; border-radius: 5px; border:2px solid  rgb(204, 4, 137); color: rgb(204, 4, 137); font-weight: bolder;' />
+            <input placeholder="c" type="number" id="c"
+                style='text-align: center; width: 50px; height: 50px; font-size: 20px; border-radius: 5px; border:2px solid  rgb(204, 4, 137); color: rgb(204, 4, 137); font-weight: bolder;' />
+        </div>
+
         <br><br>
-        <button style="width:180px; height: 50px; border-radius: 5px; border: none;"
-            onclick="Quad()">Calculate</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="Quad()">
+            Calculate
+        </button>
+        <br>
+        <p id="output" style="color: rgb(204, 4, 137);"></p>
+        <!-- Colored FAB button -->
+        <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+            <i class="material-icons">add</i>
+          </button> -->
     </div>
 
     <script src="./Quadratic.js"></script>

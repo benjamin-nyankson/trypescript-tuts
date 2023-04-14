@@ -112,13 +112,14 @@
 // const invokeFunction = myFunct(true,false)
 // console.log(invokeFunction)
 //function signature <>Define the general structure of a function<>
+// example1
 let greet;
 greet = (name, greeting) => {
     console.log(`${name} says ${greeting}`);
 };
-greet('MIles', 'Hello');
-let calculate;
-calculate = (num1, num2, action) => {
+// example 2
+let calc;
+calc = (num1, num2, action) => {
     if (action === 'add') {
         return num1 + num2;
     }
@@ -126,4 +127,11 @@ calculate = (num1, num2, action) => {
         return num1 - num2;
     }
 };
-console.log(calculate(20, 4, 'add'));
+//example3 
+let logDetails;
+logDetails = (person) => {
+    console.log(`${person.name} is ${person.age} years old`);
+};
+logDetails = (person) => {
+    console.log(`${person.name} is ${person.age} years old`);
+};

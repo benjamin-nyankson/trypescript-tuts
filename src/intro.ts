@@ -155,23 +155,38 @@
 
 //function signature <>Define the general structure of a function<>
 
+// example1
 let greet: (a:string, b:string)=>void;
 greet=(name:string, greeting:string)=>{
     console.log(`${name} says ${greeting}`)
 }
 
-greet('MIles','Hello')
+// example 2
 
-let calculate:(a:number, b:number, c:string)=>number;
-calculate=(num1:number, num2:number, action:string)=>{
-
+let calc:(a:number, b:number, c:string)=>number
+calc =(num1:number, num2:number,action:string)=>{
     if(action==='add'){
-       return num1+num2
+        return num1+num2
     }
     else{
         return num1-num2
     }
 }
 
-console.log(calculate(20,4,'add'))
 
+//example3 
+
+let logDetails:(obj:{name:string, age:number})=>void
+
+
+logDetails= (person:{name:string, age:number,})=>{
+console.log(`${person.name} is ${person.age} years old`)
+}
+
+    //you can replace the above code with
+    type personType = {name:string, age:number}
+    logDetails= (person:personType)=>{
+        console.log(`${person.name} is ${person.age} years old`)
+    }
+
+    

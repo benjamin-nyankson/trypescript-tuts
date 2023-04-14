@@ -1,17 +1,19 @@
 "use strict";
-const inputs = document.querySelectorAll('input');
-const a = inputs[0].value;
-const b = inputs[1].value;
-const c = inputs[2].value;
-const evaluate = (num) => {
-    num = +num ? +num.toFixed(2) : 0;
-    return num;
+let a = document.querySelector('#a');
+let b = document.querySelector('#b');
+let c = document.querySelector('#c');
+const output = document.querySelector('#output');
+const Quad = () => {
+    const descriminant = b.valueAsNumber * b.valueAsNumber - 4 * a.valueAsNumber * c.valueAsNumber;
+    const x1 = (-b.valueAsNumber + Math.sqrt(b.valueAsNumber * b.valueAsNumber - 4 * a.valueAsNumber * c.valueAsNumber)) / 2 * a.valueAsNumber;
+    const x2 = (-b.valueAsNumber - Math.sqrt(b.valueAsNumber * b.valueAsNumber - 4 * a.valueAsNumber * c.valueAsNumber)) / 2 * a.valueAsNumber;
+    const root = descriminant < 0 ? 'The equation has no roots' : descriminant === 0 ? `The equation has repeated roots which is ${x1.toFixed(2)} an` : `the roots are ${x1.toFixed(2)} and ${x2.toFixed(2)}`;
+    if (a.value === '' || b.value === '' || c.value === '') {
+        output.innerHTML = 'all fields are required';
+    }
+    else {
+        console.log(root);
+        output.innerHTML = root;
+    }
 };
-console.log(a);
-const Quad = (a, b, c) => {
-    const x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / 2 * a;
-    const x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / 2 * a;
-    return `the roots are ${x1} and ${x2}`;
-};
-const solve = Quad(1, -8, 15);
-console.log(solve);
+//1,-8,15
