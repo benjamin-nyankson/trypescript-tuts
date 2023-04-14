@@ -16,4 +16,4 @@ const Quad = (a:number, b:number,c:number)=>{
 }
 
 const solve = Quad(1,-8,15)
-console.log(solve)
+console.log(solve) 
